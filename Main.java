@@ -1,15 +1,23 @@
-package Homework4Abstract;
+package Hw5_2;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
-        Player user1 = new Player();
-        // Програвання
-        user1.play();
-        user1.pause();
-        user1.stop();
-        // Запис
-        user1.record();
-        user1.pause();
-        user1.stop();
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+        ListIterator<Integer> iterator = numbers.listIterator();
+        while (iterator.hasNext()) {
+            int number = iterator.next();
+            iterator.set(number + 1);
+        }
+
+        System.out.println(numbers);
     }
 }
